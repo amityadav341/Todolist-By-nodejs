@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>my site</title>
+</head>
+<body>
+   <div class="box" id="heading">
+       <h1><%= head %></h1>
+    </div>
+   
+    <div class="box">
+        <form action="/" method="POST">
+            <input type="text" name="newitem" required="required" placeholder="New Item" autocomplete="off">
+            <button onclick="submit" name="button" value=<%= head %>>+</button>
+        </form>
+
+        <% for(var i=0;i<keyitem.length;i++) { %>
+            <div class="item">
+                <input type="checkbox">
+                <p> <%= keyitem[i] %></p>
+            </div>
+       
+        <% } %>
+    </div>
+</body>
+</html>
